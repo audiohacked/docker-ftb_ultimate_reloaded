@@ -1,4 +1,4 @@
-# Feed-The-Beast Interactions (Modded Minecraft 1.12) in Docker
+# Feed-The-Beast Ultimate Reloaded (Modded Minecraft 1.12) in Docker
 To pull the image:
 ```
 docker pull audiohacked/ftb_ultimate_reloaded:stable
