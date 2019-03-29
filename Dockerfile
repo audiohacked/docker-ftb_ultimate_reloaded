@@ -2,10 +2,10 @@
 FROM openjdk:8-jre-alpine
 MAINTAINER Sean Nelson <audiohacked@gmail.com>
 
-ARG MODPACK="FTBUltimateReloaded" \
-    FTB_VERSION="1_2_1" \
-    BASE_URL="http://ftb.cursecdn.com/FTB2/modpacks/${MODPACK}" \
-    SERVER_FILE="${MODPACK}Server.zip"
+ARG MODPACK="FTBUltimateReloaded"
+ARG FTB_VERSION="1_2_1"
+ARG BASE_URL="http://ftb.cursecdn.com/FTB2/modpacks/${MODPACK}"
+ARG SERVER_FILE="${MODPACK}Server.zip"
 
 ENV SERVER_PORT=25565
 
