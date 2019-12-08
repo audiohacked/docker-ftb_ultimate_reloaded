@@ -11,8 +11,9 @@ WORKDIR /minecraft
 
 USER minecraft
 
-ADD --chown=minecraft ${BASE_URL}/${FTB_VERSION}/${SERVER_FILE} .
-RUN unzip ${SERVER_FILE}
+RUN wget ${BASE_URL}/${MODPACK}/${FTB_VERSION}/${SERVER_FILE} \
+    && unzip ${SERVER_FILE} \
+    && rm ${SERVER_FILE}
 RUN chmod u+x FTBInstall.sh ServerStart.sh
 RUN sed -i '2i /bin/sh /minecraft/CheckEula.sh' /minecraft/ServerStart.sh
 RUN /minecraft/FTBInstall.sh
